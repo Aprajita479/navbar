@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NAVBAR</title>
+    <style>
+        *{
+    font-family: montserrat;
+    font-weight: 400;
+    border-spacing: border-box;
+    
+}
+body{
+    margin: 0;
+    height: 100vh;
+    padding: 0;
+    font-family: montserrat;
+    background-color: lightcoral;
+    }
+        #sidebar{
+            position: fixed;
+            width: 200px;
+            height: 100%;
+            background-color: black;
+            left: -200px;
+            transition: all 500ms linear;
+        }
+        #sidebar.active{
+            left: 0px;
+        }
+        li i{
+            left: -150px;
+            transition: all 500ms linear;
+        } 
+        #sidebar ul{
+            padding: 0px;
+        }
+        #sidebar ul li{
+            color: aqua;
+            list-style: none; 
+            padding: 15px 10px;
+            border-bottom: 1px solid grey;
+        }
+        #sidebar ul li:hover{
+            background-color:lightcoral;
+        color: black;
+        cursor: pointer;
+        }
+        .toggle-btn{
+            position: absolute;
+            left: 230px;
+            top: 20px;
+        }
+        .toggle-btn span{
+            display: block;
+            width: 30px;
+            height: 5px;
+            background: #151719;
+            margin: 5px 0px;
+        }
+    </style>
+    <script language="Javascript" type="text/javascript">
+    
+    function togglesidebar(){
+        document.getElementById("sidebar").classList.toggle('active');
+    }
+    </script>
+</head>
+<body>
+    <div id="sidebar">
+        <div class="toggle-btn" onclick="togglesidebar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li>USER<i class="fa fa-arrow-right" aria-hidden="true"></i></li>
+            <li>MESSAGE<i class="fa fa-arrow-right" aria-hidden="true"></i></li>
+            <li>EVENTS<i class="fa fa-arrow-right" aria-hidden="true"></i></li>
+            <li>LOCATION<i class="fa fa-arrow-right" aria-hidden="true"></i></li>
+            <li>CONTACT US<i class="fa fa-arrow-right" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+</body>
+</html>
